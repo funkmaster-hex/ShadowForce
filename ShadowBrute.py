@@ -20,4 +20,5 @@ for line in open(uhs):
     for word in open(wordlist):
         calculatedHash = crypt.crypt(word.strip('\n'), hashprefix+salt)
 	if(calculatedHash.split('$')[3] == passHash):
-            print(username+"'s password is :"+word.strip('\n'))
+            print("USERNAME: '"+username+"' PASSWORD: '"+word.strip('\n')+"'")
+os.system("rm ./uhs.txt")
